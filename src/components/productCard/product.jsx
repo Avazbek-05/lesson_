@@ -38,8 +38,8 @@ const Product = () => {
 
   return (
     <section className="my-5">
-      <div className="container1 flex items-start gap-5">
-        <div className="w-[320px] mt-[100px] ">
+      <div className="container1 flex items-start gap-5 max-[900px]:flex-col">
+        <div className="w-[320px] mt-[100px] max-[900px]:w-[60%] max-[900px]:m-auto max-[730px]:w-full">
           <form onSubmit={submit} className="flex flex-col gap-4 border p-4 rounded-2xl">
             <input
               ref={nameRef}
@@ -62,11 +62,11 @@ const Product = () => {
         </div>
         {/* card */}
         <div className="w-full">
-          <div className="grid grid-cols-4 gap-5">
+          <div className="grid grid-cols-4 gap-5 max-[1300px]:grid-cols-2 max-[900px]:grid-cols-3 max-[660px]:grid-cols-2 max-[440px]:grid-cols-1">
             {data.map((value) => (
-              <div key={value.id}>
+              <div key={value.id} className="">
                 <img
-                  className="w-[320px] h-[380px] rounded-xl"
+                  className="w-full h-[380px] max-[730px]:h-[300px] rounded-xl flex flex-col items-center justify-center"
                   src={value.image}
                   alt=""
                 />
