@@ -1,68 +1,62 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;800;900&display=swap");
+@import "tailwindcss";
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  font-family: "Inter", sans-serif;
 }
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.container1 {
+  width: 90%;
+  margin: 0 auto;
 }
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
+@media (min-width: 1400px) {
+  .container1 {
+    width: 1350px;
+    margin: 0 auto;
   }
 }
+
+
+/* 
+<section className=" w-full grid grid-cols-4 gap-5">
+      {data.map((value) => (
+        <div key={value.id}>
+          <img
+            className="w-[320px] h-[380px] rounded-xl"
+            src={value.image}
+            alt=""
+          />
+          <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-1">
+              <h2 className="text-[#1f2026] text-[14px]">
+                {value.title.slice(0, 60) + "..."}
+              </h2>
+              <div className="flex items-center gap-1">
+                <i className="fa-solid text-sm text-[#FFB54C] fa-star"></i>
+                <div className="flex items-center gap-[3px] text-[#7e818c] text-[12px] font-light">
+                  <p>{value.rating}</p>
+                  <p>({value.reviews} sharhlar) </p>
+                </div>
+              </div>
+              <h1 className="text-[#1f1f26] rounded-sm text-[12px] bg-[#ff0] w-fit px-1 py-[2px] cursor-pointer">
+                {value.monthlyPrice}
+              </h1>
+            </div>
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="text-[#7e818c] text-[11px] line-through">
+                  {value.oldPrice.toLocaleString("ru-RU")}
+                </p>
+                <p className="text-[#1f2026] text-sm">
+                  {value.currentPrice.toLocaleString("ru-RU") + "so'm"}
+                </p>
+              </div>
+              <img className="cursor-pointer" src={button} alt="" />
+            </div>
+          </div>
+        </div>
+      ))}
+    </section>
+
+
+
+*/
